@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather App</title>
+    <link rel="shortcut icon" type="image/png" href="./images/favicon2.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <head>
+      <title>Weather App</title>
+    </head>
+    <body>
+      <div class="card">
+        <form class="search" id="search_form">
+          <input
+            type="search"
+            class="search_bar"
+            name="searchQuery"
+            autocomplete="on"
+            placeholder="Enter location"
+          />
+          <button type="submit" class="primary-button">
+            <svg class="search-icon" width="16" height="16">
+              <use href="./images/sprite.svg#1"></use>
+            </svg>
+          </button>
+        </form>
+        <p class="error"></p>
+        <p class="or">or</p>
+        <div class="location">
+          <button type="submit" class="location-button">
+            <svg class="location-icon" width="16" height="16">
+              <use href="./images/sprite.svg#location"></use>
+            </svg>
+            Use current location
+          </button>
+        </div>
+        <div class="weather">
+          <h2 class="city"></h2>
+          <div class="temp"></div>
+          <img src="" class="icon" />
+          <div class="description"></div>
+          <div class="humidity"></div>
+          <div class="wind"></div>
+        </div>
+      </div>
+    </body>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
