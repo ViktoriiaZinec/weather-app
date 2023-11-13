@@ -121,8 +121,8 @@ body {
   background: var(--location-btn);
   padding: 2px 18x;
   color: #ffffff;
-  width: 70%;
-  height: 52px;
+  width: 60%;
+  height: 42px;
   font-size: 14px;
   font-weight: 600;
   border: none;
@@ -169,13 +169,13 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px;
+  gap: 10px;
 }
 .search-form-wrap {
   width: 100%;
 }
 .search_bar {
-  padding: 16px 20px;
+  padding: 8px 20px;
   width: 100%;
   outline: none;
   border: none;
@@ -192,14 +192,17 @@ body {
 }
 #search_form {
   position: relative;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 .submit-icon {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 4px;
+  right: 0px;
   cursor: pointer;
   color: var(--text-color);
+}
+.fa-custom-search {
+  font-size: 16px;
 }
 .btn-submit {
   position: absolute;
@@ -214,9 +217,9 @@ body {
 .container {
   background: var(--input-bcg);
   border-radius: 30px;
-  padding: 40px 24px;
+  padding: 20px 24px;
   box-shadow: var(--shadow);
-  margin-top: 28px;
+  margin-top: 10px;
   transition: var(--transition-effect);
 }
 
@@ -226,32 +229,34 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
+  align-items: end;
   transition: var(--transition-effect);
 }
 
 .city {
-  font-size: 46px;
+  font-size: 32px;
   font-weight: 700;
 }
 
 .time {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1.2;
   background: var(--temp-gradient);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: block;
 }
 
 .date {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
+  display: block;
 }
 
 .current-weather {
-  margin-top: 20px;
+  margin-top: 14px;
   height: auto;
   transition: var(--transition-effect);
 }
@@ -261,7 +266,7 @@ body {
 }
 
 .temp {
-  font-size: 54px;
+  font-size: 34px;
   font-weight: 700;
   background: var(--temp-gradient);
   background-clip: text;
@@ -272,11 +277,14 @@ body {
 }
 .feels-like-title {
   color: var(--feels-like-color);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
 }
 .feels-like {
-  font-size: 22px;
+  font-size: 18 px;
+}
+.time-date-wrapper {
+  width: 30%;
 }
 
 .weather-second-column {
@@ -284,7 +292,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 .sun {
   font-size: 12px;
@@ -295,7 +303,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  gap: 20px;
+  gap: 10px;
 }
 .sunrise-sunset-container-first {
   display: none;
@@ -304,17 +312,18 @@ body {
 .sunset-container {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
 }
 .sunrise,
 .sunset {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
 }
 
 .description {
   font-size: 16px;
+  margin-top: -10px;
   font-weight: 600;
   text-align: center;
 }
@@ -324,9 +333,8 @@ body {
 .weather-third-column {
   display: flex;
   flex-direction: row;
-
   margin-top: 20px;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
   gap: 20px;
   text-align: center;
@@ -362,6 +370,23 @@ body {
   .fa-custom {
     font-size: 40px;
   }
+  .time {
+    font-size: 32px;
+  }
+  .feels-like-title,
+  .description,
+  .humidity,
+  .wind,
+  .pressure,
+  .sunrise,
+  .sunset {
+    font-size: 18px;
+  }
+  .sun,
+  .date,
+  .desc-text {
+    font-size: 14px;
+  }
 }
 @media screen and (min-width: 768px) {
   body {
@@ -386,9 +411,15 @@ body {
     width: 80%;
   }
   .search_bar {
-    padding: 16px 20px;
+    padding: 10px 20px;
     outline: none;
     font-size: 18px;
+  }
+  .container {
+    margin-top: 20px;
+  }
+  .submit-icon {
+    top: 6px;
   }
   .condition-container {
     display: flex;
@@ -450,7 +481,9 @@ body {
     box-shadow: none;
     margin-top: 38px;
   }
-
+  .time-date-wrapper {
+    width: 100%;
+  }
   .city-time-info {
     width: 40%;
     background: var(--input-bcg);

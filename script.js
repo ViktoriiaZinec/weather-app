@@ -73,7 +73,9 @@ function updateWeatherUI(data) {
   const { hours, mins, day, number, month } = getDate();
   document.querySelector(".time").innerText = `${hours} : ${mins}`;
   document.querySelector(".date").innerText = `${day}, ${number} ${month}`;
-
+  // document.querySelector(".month-date").innerText = ;
+  const span = document.querySelector(".month-date");
+  console.log("span", span);
   //convert to hours
   const timezoneOffset = data.timezone / 60;
 
