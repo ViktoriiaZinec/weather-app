@@ -8,7 +8,7 @@ It features a responsive design, catering to various devices such as mobile phon
 <img src="./images/readme-img/desktope-dark.png" width="100%">
 
 <p float="left">
-<img src="./images/readme-img/tablet-dark.png" width="65%">
+<img src="./images/readme-img/tablet-dark.png" width="66%">
 <img src="./images/readme-img/mobile-dark.png" width="34%">
 </p>
 
@@ -16,7 +16,7 @@ Additionally, the application offers two themes – a light theme and a dark the
 <img src="./images/readme-img/desktope-light.png" width="100%">
 
 <p float="left" >
-<img src="./images/readme-img/tablet-light.png" width="65%">
+<img src="./images/readme-img/tablet-light.png" width="66%">
 <img src="./images/readme-img/mobile-light.png" width="34%">
 </p>
 
