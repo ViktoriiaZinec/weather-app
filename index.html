@@ -8,51 +8,134 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/c9f3abfb00.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Weather App</title>
   </head>
   <body>
-    <head>
-      <title>Weather App</title>
-    </head>
-    <body>
-      <div class="card">
-        <form class="search" id="search_form">
-          <input
-            type="search"
-            class="search_bar"
-            name="searchQuery"
-            autocomplete="on"
-            placeholder="Enter location"
-          />
-          <button type="submit" class="primary-button">
-            <svg class="search-icon" width="16" height="16">
-              <use href="./images/sprite.svg#1"></use>
-            </svg>
+    <header>
+     
+        <div class="toggle-input-wrapper">
+          <div class="toggle-theme">
+            <div class="toggle-wrapper">
+              <input type="checkbox" name="toggle" id="mode" />
+              <label for="toggle" class="toggle-body">
+                <span class="thumb"></span>
+              </label>
+            </div>
+            <p id="theme"></p>
+          </div>
+          <button type="submit" class="location-btn">
+            <i class="fa-solid fa-location-crosshairs fa-lg"></i>
+            <span class="btn-location-title">Use current location</span>
           </button>
-        </form>
-        <p class="error"></p>
-        <p class="or">or</p>
-        <div class="location">
-          <button type="submit" class="location-button">
-            <svg class="location-icon" width="16" height="16">
-              <use href="./images/sprite.svg#location"></use>
+                <div class="search-form-wrap">
+          <form class="search" id="search_form">
+            <input
+              type="search"
+              class="search_bar"
+              name="searchQuery"
+              autocomplete="on"
+              placeholder="Search for your city..."
+            />
+            <button type="submit" class="btn-submit">
+            <i class="fa-solid fa-magnifying-glass fa-2x submit-icon"></i>
+            </button>
+          </form>
+          <p class="error"></p>
+        </div>
+        </div>
+      
+    </header>
+    <main class="container">
+      <section class="city-time-info">
+        <h2 class="city"></h2>
+        <div class="time-date-wrapper">
+        <p class="time"></p>
+        <p class="date"></p>
+        </div>
+      </section>
+      <section class="current-weather">
+        <div class="weather-first-column">
+          <p class="temp"></p>
+          <p class="feels-like-title">
+            Feels like:<span class="feels-like"></span>
+          </p>
+          <div class="sunrise-sunset-container-first">
+                <div class="sunrise-container">         
+                  <svg class="sunrise-icon" >
+                    <use href="./images/symbol-defs.svg#icon-bi_sunrise-fill"></use>
+                  </svg>
+                  <div>
+                    <p class="sun">Sunrise:</span></p>
+                    <p class="sunrise"></p>
+                  </div>
+                </div>
+            <div class="sunset-container">
+              <svg class="sunrise-icon" >
+                <use href="./images/symbol-defs.svg#icon-bi_sunset-fill"></use>
+              </svg>            
+                <div class="sun-left">
+                  <p class="sun">Sunset:</p>
+                  <p class="sunset"></p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="weather-second-column">
+          <img src="" alt="Weather Icon" width="150px" height="150px" class="icon" />
+          <p class="description"></p>
+        </div>
+        <div class="condition-container">
+        <div class="sunrise-sunset-container">
+         <div class="sunrise-container">            
+          
+            <svg class="sunrise-icon" width="35" height="35" >
+               <use href="./images/symbol-defs.svg#icon-bi_sunrise-fill"></use>
             </svg>
-            Use current location
-          </button>
+            <div class="sun-left">
+            <p class="sun">Sunrise:</span></p>
+            <p class="sunrise" id="sunrise"></p>
+            </div>
+          </div>
+          <div class="sunset-container">
+             <svg class="sunrise-icon" width="35" height="35">
+               <use href="./images/symbol-defs.svg#icon-bi_sunset-fill"></use>
+            </svg>
+            
+            <div class="sun-left">
+            <p class="sun">Sunset:</p>
+            <p class="sunset" id="sunset"></p>
+            </div>
+          </div>
+          </div>
+        <div class="weather-third-column">
+          <div class="humidity-container">
+            <i class="fa-solid fa-water fa-custom"></i>
+            <p class="humidity"></p>
+            <p class="desc-text">Humidity</p>
+          </div>
+          <div class="wind-container">
+            <i class="fa-solid fa-wind fa-custom"></i>
+            <p class="wind"></p>
+            <p class="desc-text">Wind Speed</p>
+          </div>
+          <div class="pressure-container">
+            <i class="fa-solid fa-gauge-high fa-custom"></i>
+            <p class="pressure"></p>
+            <p class="desc-text">Pressure</p>
+          </div>
         </div>
-        <div class="weather">
-          <h2 class="city"></h2>
-          <div class="temp"></div>
-          <img src="" class="icon" />
-          <div class="description"></div>
-          <div class="humidity"></div>
-          <div class="wind"></div>
         </div>
-      </div>
-    </body>
+      </section>
+    </main>
 
     <script src="./script.js"></script>
+    <script src="./script-theme.js"></script>
   </body>
 </html>
