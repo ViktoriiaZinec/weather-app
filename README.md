@@ -7,16 +7,16 @@ This is a simple weather application that provides current weather information. 
 It features a responsive design, catering to various devices such as mobile phones, tablets, desktops, and large desktop screens through the use of media queries.
 <img src="./images/readme-img/desktope-dark.png" width="100%">
 
-<p float="left">
-<img src="./images/readme-img/tablet-dark.png" width="63%">
+<p float="left" style="display: flex; justify-content: space-between">
+<img src="./images/readme-img/tablet-dark.png" width="64%">
 <img src="./images/readme-img/mobile-dark.png" width="33%">
 </p>
 
 Additionally, the application offers two themes – a light theme and a dark theme, allowing users to choose their preferred visual style.
 <img src="./images/readme-img/desktope-light.png" width="100%">
 
-<p float="left">
-<img src="./images/readme-img/tablet-light.png" width="63%">
+<p float="left" style="display: flex; justify-content: space-between">
+<img src="./images/readme-img/tablet-light.png" width="64%">
 <img src="./images/readme-img/mobile-light.png" width="33%">
 </p>
 
