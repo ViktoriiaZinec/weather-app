@@ -448,12 +448,11 @@ body {
     border-radius: 30px;
     padding: 0;
     box-shadow: none;
-    margin-top: 28px;
+    margin-top: 38px;
   }
 
   .city-time-info {
     width: 40%;
-
     background: var(--input-bcg);
     padding: 53px 20px;
     border-radius: 30px;
@@ -615,36 +614,3 @@ body {
     font-size: 26px;
   }
 }
-
-/* .city,
-.icon,
-.description,
-.temp,
-.feels-like,
-.humidity,
-.wind,
-.pressure,
-.sunrise,
-.sunset,
-.time,
-.date {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.city.show,
-.icon.show,
-.description.show,
-.temp.show,
-.feels-like.show,
-.humidity.show,
-.wind.show,
-.pressure.show,
-.sunrise.show,
-.sunset.show,
-.time.show,
-.date.show {
-  opacity: 1;
-  transform: translateY(0);
-} */

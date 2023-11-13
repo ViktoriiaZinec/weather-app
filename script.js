@@ -92,8 +92,6 @@ function updateWeatherUI(data) {
   const localMins = localTime.getMinutes().toString().padStart(2, "0");
 
   document.querySelector(".time").innerText = `${localHours} : ${localMins}`;
-
-  // showWeatherData();
 }
 
 async function fetchWeather(input) {
@@ -123,16 +121,6 @@ fetchWeather("Kyiv");
 btn.addEventListener("click", async function (event) {
   event.preventDefault();
   const inputValue = input.value.trim();
-  // const elements = document.querySelectorAll(".show");
-  // elements.forEach((element, index) => {
-  //   setTimeout(() => {
-  //     element.classList.remove("show");
-
-  //     setTimeout(() => {
-  //       element.classList.add("show");
-  //     }, 500);
-  //   }, 100);
-  // });
 
   document.querySelector(".error").innerText = "";
   if (!inputValue) {
@@ -207,13 +195,3 @@ const getDate = () => {
 
   return { day, number, month };
 };
-
-// function showWeatherData() {
-//   const elements = document.querySelectorAll(
-//     ".city, .icon, .description, .temp, .feels-like, .humidity, .wind, .pressure, .sunrise, .sunset, .time, .date"
-//   );
-
-//   elements.forEach((element) => {
-//     element.classList.add("show");
-//   });
-// }
