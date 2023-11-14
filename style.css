@@ -8,7 +8,7 @@
   );
   --location-btn: #4cbb17;
   --input-bcg: #444444;
-  --shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  --shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.35);
   --transition-effect: all 0.5s ease-in-out;
   --temp-gradient: linear-gradient(
     160deg,
@@ -44,6 +44,9 @@ button {
 }
 img {
   display: block;
+}
+input[type="»search»"]::-webkit-search-cancel-button {
+  display: none;
 }
 
 body {
@@ -128,7 +131,7 @@ body {
   border: none;
   border-radius: 30px;
   box-shadow: var(--shadow);
-  transition: var(--transition-effect);
+  transition: all 0.2s ease;
   line-height: 1;
 }
 
@@ -139,21 +142,11 @@ body {
   width: 40px;
   height: 40px;
 }
-.location-btn:hover {
-  background-image: linear-gradient(
-    90deg,
-    #4cbb17 0%,
-    #c7db40 63%,
-    #07c32d 80%,
-    #4cbb17 100%
-  );
-  animation: slidebg 2s linear infinite;
-}
-
-@keyframes slidebg {
-  to {
-    background-position: 220px;
-  }
+.location-btn:hover,
+.location-btn:active {
+  transform: scale(0.99) translateY(2px);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45);
+  background: #43a814;
 }
 
 .location-btn:active {
@@ -480,6 +473,12 @@ body {
     padding: 0;
     box-shadow: none;
     margin-top: 38px;
+  }
+  .search_bar {
+    padding: 15px 20px;
+  }
+  .submit-icon {
+    top: 12px;
   }
   .time-date-wrapper {
     width: 100%;

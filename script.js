@@ -1,5 +1,7 @@
 "use strict";
 
+// https://api.openweathermap.org/data/2.5/forecast?lat=50.45&lon=30.52&appid=0f1581161aa123427d4fa63078351e30
+
 const API_KEY = "0f1581161aa123427d4fa63078351e30";
 
 const form = document.querySelector(".search");
@@ -73,9 +75,7 @@ function updateWeatherUI(data) {
   const { hours, mins, day, number, month } = getDate();
   document.querySelector(".time").innerText = `${hours} : ${mins}`;
   document.querySelector(".date").innerText = `${day}, ${number} ${month}`;
-  // document.querySelector(".month-date").innerText = ;
-  const span = document.querySelector(".month-date");
-  console.log("span", span);
+
   //convert to hours
   const timezoneOffset = data.timezone / 60;
 
@@ -104,6 +104,7 @@ async function fetchWeather(input) {
     const response = await fetch(endpoint);
     if (response.ok) {
       const data = await response.json();
+      console.log("data", data.sys);
       updateWeatherUI(data);
       return data;
     } else {
